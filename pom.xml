@@ -136,6 +136,11 @@
         <version>2.0.11</version>
       </plugin>
 
+	  <plugin>
+	    <groupId>com.microsoft.azure</groupId>
+        <artifactId>azure-webapp-maven-plugin</artifactId>
+        <version>1.9.0</version>
+      </plugin>
       <!-- Plugin configuration for Heroku compatibility.
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
