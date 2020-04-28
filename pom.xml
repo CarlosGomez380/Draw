@@ -1,146 +1,150 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  
-  <groupId>edu.eci.arsw</groupId>
-  <artifactId>DrawIt</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
+<?xml version="1.0" encoding="UTF-8"?>
 
-  <parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.2.4.RELEASE</version>
-    <relativePath /> <!-- lookup parent from repository -->
-  </parent>
-
-
-
-  <name>Draw It</name>
-
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-  </properties>
-
-  <dependencies>
-    
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-test</artifactId>
-      <scope>test</scope>
-      <exclusions>
-        <exclusion>
-          <groupId>org.junit.vintage</groupId>
-          <artifactId>junit-vintage-engine</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    
-    <dependency>
-      <groupId>com.google.code.gson</groupId>
-      <artifactId>gson</artifactId>
-      <version>2.8.5</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.webjars.npm</groupId>
-      <artifactId>alertifyjs</artifactId>
-      <version>1.8.0</version>
-    </dependency>
-    
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.12</version>
-    </dependency>
-    
-    <dependency>
-      <groupId>org.postgresql</groupId>
-      <artifactId>postgresql</artifactId>
-      <scope>runtime</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>javax</groupId>
-      <artifactId>javaee-web-api</artifactId>
-      <version>8.0</version>
-      <scope>provided</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>jstl</artifactId>
-      <version>1.2</version>
-    </dependency>
-    <!-- Configuracion del ORM de spring boot para persistencia -->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-data-jpa</artifactId>
-    </dependency>
-
-    <!-- Websockets-->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-websocket</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.webjars</groupId>
-      <artifactId>sockjs-client</artifactId>
-      <version>1.1.2</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.webjars</groupId>
-      <artifactId>stomp-websocket</artifactId>
-      <version>2.3.3-1</version>
-    </dependency>
-
-    <dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>toastr</artifactId>
-			<version>2.1.2</version>
-		</dependency>
-
-    <dependency>
-      <groupId>org.webjars</groupId>
-      <artifactId>webjars-locator</artifactId>
-      <version>0.30</version>
-    </dependency>
-
-  </dependencies>
-
-  <build>
-
-    <plugins>
-      <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-      </plugin>
-      <plugin>
-        <groupId>com.heroku.sdk</groupId>
-        <artifactId>heroku-maven-plugin</artifactId>
-        <version>2.0.11</version>
-      </plugin>
-
-	  <plugin>
-	    <groupId>com.microsoft.azure</groupId>
-        <artifactId>azure-webapp-maven-plugin</artifactId>
-        <version>1.9.0</version>
-      </plugin>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">  
+  <modelVersion>4.0.0</modelVersion>  
+  <groupId>edu.eci.arsw</groupId>  
+  <artifactId>DrawIt</artifactId>  
+  <version>0.0.1-SNAPSHOT</version>  
+  <packaging>war</packaging>  
+  <parent> 
+    <groupId>org.springframework.boot</groupId>  
+    <artifactId>spring-boot-starter-parent</artifactId>  
+    <version>2.2.4.RELEASE</version>  
+    <relativePath/>  
+    <!-- lookup parent from repository --> 
+  </parent>  
+  <name>Draw It</name>  
+  <properties> 
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  
+    <maven.compiler.source>1.8</maven.compiler.source>  
+    <maven.compiler.target>1.8</maven.compiler.target> 
+  </properties>  
+  <dependencies> 
+    <dependency> 
+      <groupId>org.springframework.boot</groupId>  
+      <artifactId>spring-boot-starter-web</artifactId> 
+    </dependency>  
+    <dependency> 
+      <groupId>org.springframework.boot</groupId>  
+      <artifactId>spring-boot-starter</artifactId> 
+    </dependency>  
+    <dependency> 
+      <groupId>org.springframework.boot</groupId>  
+      <artifactId>spring-boot-starter-test</artifactId>  
+      <scope>test</scope>  
+      <exclusions> 
+        <exclusion> 
+          <groupId>org.junit.vintage</groupId>  
+          <artifactId>junit-vintage-engine</artifactId> 
+        </exclusion> 
+      </exclusions> 
+    </dependency>  
+    <dependency> 
+      <groupId>com.google.code.gson</groupId>  
+      <artifactId>gson</artifactId>  
+      <version>2.8.5</version> 
+    </dependency>  
+    <dependency> 
+      <groupId>org.webjars.npm</groupId>  
+      <artifactId>alertifyjs</artifactId>  
+      <version>1.8.0</version> 
+    </dependency>  
+    <dependency> 
+      <groupId>junit</groupId>  
+      <artifactId>junit</artifactId>  
+      <version>4.12</version> 
+    </dependency>  
+    <dependency> 
+      <groupId>org.postgresql</groupId>  
+      <artifactId>postgresql</artifactId>  
+      <scope>runtime</scope> 
+    </dependency>  
+    <dependency> 
+      <groupId>javax</groupId>  
+      <artifactId>javaee-web-api</artifactId>  
+      <version>8.0</version>  
+      <scope>provided</scope> 
+    </dependency>  
+    <dependency> 
+      <groupId>javax.servlet</groupId>  
+      <artifactId>jstl</artifactId>  
+      <version>1.2</version> 
+    </dependency>  
+    <!-- Configuracion del ORM de spring boot para persistencia -->  
+    <dependency> 
+      <groupId>org.springframework.boot</groupId>  
+      <artifactId>spring-boot-starter-data-jpa</artifactId> 
+    </dependency>  
+    <!-- Websockets-->  
+    <dependency> 
+      <groupId>org.springframework.boot</groupId>  
+      <artifactId>spring-boot-starter-websocket</artifactId> 
+    </dependency>  
+    <dependency> 
+      <groupId>org.webjars</groupId>  
+      <artifactId>sockjs-client</artifactId>  
+      <version>1.1.2</version> 
+    </dependency>  
+    <dependency> 
+      <groupId>org.webjars</groupId>  
+      <artifactId>stomp-websocket</artifactId>  
+      <version>2.3.3-1</version> 
+    </dependency>  
+    <dependency> 
+      <groupId>org.webjars</groupId>  
+      <artifactId>toastr</artifactId>  
+      <version>2.1.2</version> 
+    </dependency>  
+    <dependency> 
+      <groupId>org.webjars</groupId>  
+      <artifactId>webjars-locator</artifactId>  
+      <version>0.30</version> 
+    </dependency> 
+  </dependencies>  
+  <build> 
+    <plugins> 
+      <plugin> 
+        <groupId>org.springframework.boot</groupId>  
+        <artifactId>spring-boot-maven-plugin</artifactId> 
+      </plugin>  
+      <plugin> 
+        <groupId>com.heroku.sdk</groupId>  
+        <artifactId>heroku-maven-plugin</artifactId>  
+        <version>2.0.11</version> 
+      </plugin>  
+      <plugin> 
+        <groupId>com.microsoft.azure</groupId>  
+        <artifactId>azure-webapp-maven-plugin</artifactId>  
+        <version>1.9.0</version>  
+        <configuration>
+          <schemaVersion>V2</schemaVersion>
+          <resourceGroup>DrawIt-1588100093479-rg</resourceGroup>
+          <appName>DrawIt-1588100093479</appName>
+          <pricingTier>P1v2</pricingTier>
+          <region>westeurope</region>
+          <runtime>
+            <os>linux</os>
+            <javaVersion>jre8</javaVersion>
+            <webContainer>TOMCAT 8.5</webContainer>
+          </runtime>
+		  <appSettings>
+            <property>
+                <name>JAVA_OPTS</name>
+                <value>-Dserver.port=80</value>
+            </property>
+          </appSettings>
+          <deployment>
+            <resources>
+              <resource>
+                <directory>${project.basedir}/target</directory>
+                <includes>
+                  <include>*.war</include>
+                </includes>
+              </resource>
+            </resources>
+          </deployment>
+        </configuration>
+      </plugin>  
       <!-- Plugin configuration for Heroku compatibility.
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -166,24 +170,21 @@
           </execution>
 
         </executions>
-      </plugin-->
-    </plugins>
-  </build>
-
-  <repositories>
-    <repository>
-      <id>spring-milestones</id>
-      <name>Spring Milestones</name>
-      <url>https://repo.spring.io/milestone</url>
-    </repository>
-  </repositories>
-  <pluginRepositories>
-    <pluginRepository>
-      <id>spring-milestones</id>
-      <name>Spring Milestones</name>
-      <url>https://repo.spring.io/milestone</url>
-    </pluginRepository>
-  </pluginRepositories>
-
-
+      </plugin--> 
+    </plugins> 
+  </build>  
+  <repositories> 
+    <repository> 
+      <id>spring-milestones</id>  
+      <name>Spring Milestones</name>  
+      <url>https://repo.spring.io/milestone</url> 
+    </repository> 
+  </repositories>  
+  <pluginRepositories> 
+    <pluginRepository> 
+      <id>spring-milestones</id>  
+      <name>Spring Milestones</name>  
+      <url>https://repo.spring.io/milestone</url> 
+    </pluginRepository> 
+  </pluginRepositories> 
 </project>
